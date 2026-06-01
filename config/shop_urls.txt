@@ -2,7 +2,7 @@
 # Se não quiser nome, pode deixar só a URL.
 # Moeda opcional: Zeny, Hero Points ou Moeda RMT.
 
-Lojinha 4|https://herosaga.com.br/?module=vending&action=viewshop&id=43492|Hero Points
-Lojinha 3|https://herosaga.com.br/?module=vending&action=viewshop&id=43471|Hero Points
-Lojinha 2|https://herosaga.com.br/?module=vending&action=viewshop&id=43455|Hero Points
-Lojinha 1|https://herosaga.com.br/?module=vending&action=viewshop&id=43411|Hero Points
+Lojinha 4|https://herosaga.com.br/?module=vending&action=viewshop&id=44742|Hero Points
+Lojinha 3|https://herosaga.com.br/?module=vending&action=viewshop&id=44973|Hero Points
+Lojinha 2|https://herosaga.com.br/?module=vending&action=viewshop&id=44903|Hero Points
+Lojinha 1|https://herosaga.com.br/?module=vending&action=viewshop&id=44913|Hero Points

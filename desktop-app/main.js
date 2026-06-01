@@ -174,6 +174,12 @@ function runCommand(bin, args, cwd, extra = {}) {
   });
 }
 
+async function getCurrentGitBranch() {
+  const result = await runCommand('git', ['branch', '--show-current'], PROJECT_ROOT);
+  const branch = (result.output || '').trim();
+  return branch || 'HEAD';
+}
+
 function buildPythonEnv(input = {}, extras = {}) {
   const env = { ...extras };
   const fields = [
@@ -218,6 +224,7 @@ function buildSaveResponse(shops, env, logs = ['Configuração salva.']) {
 
 async function syncToVps(options) {
   const logs = [];
+  const currentBranch = await getCurrentGitBranch();
 
   const add = await runCommand('git', ['add', 'config/shop_urls.txt'], PROJECT_ROOT);
   logs.push(`git add: ${add.ok ? 'OK' : 'FALHOU'}`);
@@ -234,7 +241,7 @@ async function syncToVps(options) {
     logs.push('Sem mudanças de lojas para commit.');
   }
 
-  const push = await runCommand('git', ['push', 'origin', 'master'], PROJECT_ROOT);
+  const push = await runCommand('git', ['push', 'origin', currentBranch], PROJECT_ROOT);
   logs.push(`git push: ${push.ok ? 'OK' : 'FALHOU'}`);
   if (push.output) logs.push(push.output);
   if (!push.ok) return { ok: false, logs };

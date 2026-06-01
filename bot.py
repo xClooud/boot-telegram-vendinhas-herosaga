@@ -900,6 +900,7 @@ def inspect_store(target: StoreTarget, history: dict) -> dict:
     inventory = parse_shop_inventory(html)
     items = {item_key: item.quantity for item_key, item in inventory.items()}
     changes = []
+    baseline_items = 0
 
     if not items:
         logger.warning("Nenhum item detectado na página — verifique o parser ou a URL.")
@@ -926,6 +927,7 @@ def inspect_store(target: StoreTarget, history: dict) -> dict:
         prev = quantities.get(item_key)
         if prev is None:
             quantities[item_key] = qty
+            baseline_items += 1
             continue
 
         if qty < prev:
@@ -984,9 +986,16 @@ def inspect_store(target: StoreTarget, history: dict) -> dict:
         quantities[item_key] = 0
 
     if not changes:
-        logger.info("Nenhuma mudança encontrada em %s", target.name)
+        if baseline_items:
+            logger.info(
+                "Base criada para %s: %d item(ns) novo(s) salvo(s) no histórico; a próxima queda de quantidade vai gerar alerta",
+                target.name,
+                baseline_items,
+            )
+        else:
+            logger.info("Nenhuma mudança encontrada em %s", target.name)
 
-    return {"items_found": len(items), "changes": changes}
+    return {"items_found": len(items), "changes": changes, "baseline_items": baseline_items}
 
 def check_once(history: dict) -> dict:
     results = []

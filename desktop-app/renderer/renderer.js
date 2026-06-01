@@ -155,6 +155,7 @@ async function saveAllShops(options = {}) {
     setRowSavedState(row, true);
   }
   appendLogs(result.logs || [message]);
+  appendLogs(['As lojas novas entram em baseline no próximo ciclo; a primeira leitura só grava o estado atual.']);
 
   if (!syncRemote) {
     return result;

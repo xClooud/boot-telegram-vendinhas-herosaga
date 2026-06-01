@@ -143,7 +143,7 @@ O teste de conectividade foi removido da inicialização para evitar spam; o bot
 
 Na VPS Ubuntu, o worker pode ser mantido em `tmux` com o script [scripts/run_vps_worker.sh](scripts/run_vps_worker.sh). Ele faz backup de [data/history.json](data/history.json) antes do `git pull --ff-only`, evitando travar com mudanças locais, e depois roda o bot de novo.
 
-O intervalo do loop na VPS é controlado por `LOOP_SECONDS` (padrão: `10`).
+O intervalo do loop na VPS é controlado por `LOOP_SECONDS` (padrão: `5`).
 
 Exemplo:
 

@@ -21,6 +21,13 @@ if [ -f .env ]; then
 fi
 
 while true; do
+  CURRENT_BRANCH="$(git branch --show-current 2>/dev/null || true)"
+  if [ -z "$CURRENT_BRANCH" ]; then
+    log "nao foi possivel detectar o branch atual; tentando novamente no proximo ciclo"
+    sleep "$LOOP_SECONDS"
+    continue
+  fi
+
   HISTORY_BACKUP="$(mktemp)"
   HISTORY_PRESENT=0
   if [ -f data/history.json ]; then
@@ -29,7 +36,7 @@ while true; do
   fi
 
   rm -f data/history.json
-  if ! git pull --ff-only; then
+  if ! git pull --ff-only origin "$CURRENT_BRANCH"; then
     log "git pull falhou; restaurando historico e tentando novamente no proximo ciclo"
     if [ "$HISTORY_PRESENT" -eq 1 ] && [ -f "$HISTORY_BACKUP" ]; then
       mv "$HISTORY_BACKUP" data/history.json

@@ -281,6 +281,7 @@ def resolve_currency(target: StoreTarget, item_name: str, inventory: dict[str, "
 STORE_TARGETS = load_store_targets()
 
 COOLDOWN = int(os.getenv("NOTIFY_COOLDOWN", "30"))  # segundos entre notificações por item
+STORE_ISSUE_COOLDOWN = int(os.getenv("STORE_ISSUE_COOLDOWN", "86400"))
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))
 STATE_VERSION = 3
 
@@ -318,6 +319,7 @@ def load_history():
                     migrated["stores"][legacy_store_key] = {
                         "quantities": history.get("quantities", {}),
                         "last_alerts": history.get("notified", {}),
+                        "last_issue_alerts": {},
                     }
 
                 if isinstance(history.get("alerts"), dict):
@@ -756,6 +758,59 @@ def notify_sale(
     return False
 
 
+def notify_store_issue(target: StoreTarget) -> bool:
+    current_time = now_sao_paulo().strftime("%d/%m/%Y %H:%M:%S")
+    default_text = (
+        "⚠️ IMPORTANTE\n"
+        f"Loja: {target.name}\n"
+        f"URL: {target.url}\n"
+        "Status: vendedor não encontrado ou loja indisponível\n"
+        "Possível mudança de ID após manutenção\n"
+        "Ação sugerida: conferir o novo ID da loja e atualizar config/shop_urls.txt\n"
+        f"Hora: {current_time}"
+    )
+
+    telegram_text = build_telegram_message(
+        default_text,
+        target,
+        "Loja indisponível",
+        0,
+        0,
+        price=None,
+        now=current_time,
+        currency="Não identificado",
+        image_url=None,
+        hero_points=None,
+    )
+    discord_text = build_discord_message(
+        default_text,
+        target,
+        "Loja indisponível",
+        0,
+        0,
+        price=None,
+        now=current_time,
+        currency="Não identificado",
+        image_url=None,
+        hero_points=None,
+    )
+
+    telegram_sent = send_telegram(telegram_text)
+    discord_sent = send_discord(discord_text)
+    if telegram_sent and discord_sent:
+        logger.info("Aviso importante enviado para %s (Telegram e Discord)", target.name)
+        return True
+    if telegram_sent:
+        logger.info("Aviso importante enviado para %s (Telegram)", target.name)
+        return True
+    if discord_sent:
+        logger.warning("Discord enviou o aviso importante de %s, mas Telegram falhou", target.name)
+        return True
+
+    logger.warning("Nenhum canal conseguiu enviar o aviso importante de %s", target.name)
+    return False
+
+
 def run_smoke_test() -> int:
     if not TOKEN or not CHAT_IDS:
         logger.error("TOKEN e CHAT_ID são obrigatórios para enviar o teste")
@@ -808,12 +863,15 @@ def run_smoke_test() -> int:
 
 def load_store_state(history: dict, target: StoreTarget) -> dict:
     stores = history.setdefault("stores", {})
-    return stores.setdefault(target.url, {"quantities": {}, "last_alerts": {}, "items_meta": {}})
+    return stores.setdefault(
+        target.url,
+        {"quantities": {}, "last_alerts": {}, "items_meta": {}, "last_issue_alerts": {}},
+    )
 
 
-def should_alert(last_alerts: dict, key: str, now_ts: int) -> bool:
+def should_alert(last_alerts: dict, key: str, now_ts: int, cooldown: int = COOLDOWN) -> bool:
     last_seen = int(last_alerts.get(key, 0))
-    return now_ts - last_seen >= COOLDOWN
+    return now_ts - last_seen >= cooldown
 
 
 def register_alert(last_alerts: dict, key: str, now_ts: int):
@@ -826,11 +884,17 @@ def inspect_store(target: StoreTarget, history: dict) -> dict:
     quantities = store_state.setdefault("quantities", {})
     last_alerts = store_state.setdefault("last_alerts", {})
     items_meta = store_state.setdefault("items_meta", {})
+    last_issue_alerts = store_state.setdefault("last_issue_alerts", {})
 
     logger.info("Verificando itens: %s", target.url)
+    now_ts = int(time.time())
     html = fetch_shop(target.url)
     if shop_is_unavailable(html):
         logger.warning("Loja indisponível ou ID antigo: %s", target.url)
+        issue_key = f"{target.url}:unavailable"
+        if should_alert(last_issue_alerts, issue_key, now_ts, STORE_ISSUE_COOLDOWN):
+            if notify_store_issue(target):
+                register_alert(last_issue_alerts, issue_key, now_ts)
         return {"items_found": 0, "changes": [], "unavailable": True}
 
     inventory = parse_shop_inventory(html)
@@ -842,7 +906,6 @@ def inspect_store(target: StoreTarget, history: dict) -> dict:
         return {"items_found": 0, "changes": changes}
 
     logger.info("Itens encontrados na loja %s: %d", target.name, len(items))
-    now_ts = int(time.time())
 
     for item_key, qty in items.items():
         item = inventory.get(item_key)

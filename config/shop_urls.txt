@@ -5,3 +5,4 @@
 Lojinha 4|https://herosaga.com.br/?module=vending&action=viewshop&id=43492|Hero Points
 Lojinha 3|https://herosaga.com.br/?module=vending&action=viewshop&id=43471|Hero Points
 Lojinha 2|https://herosaga.com.br/?module=vending&action=viewshop&id=43455|Hero Points
+Lojinha 1|https://herosaga.com.br/?module=vending&action=viewshop&id=43411|

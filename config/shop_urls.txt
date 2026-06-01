@@ -3,3 +3,4 @@
 # Moeda opcional: Zeny, Hero Points ou Moeda RMT.
 
 Lojinha 4|https://herosaga.com.br/?module=vending&action=viewshop&id=43492|Hero Points
+Lojinha 3|https://herosaga.com.br/?module=vending&action=viewshop&id=43471|

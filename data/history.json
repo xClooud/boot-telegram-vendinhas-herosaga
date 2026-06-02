@@ -1273,7 +1273,7 @@
     },
     "https://herosaga.com.br/?module=vending&action=viewshop&id=44742": {
       "quantities": {
-        "300509": 1,
+        "300509": 0,
         "300512": 1,
         "300460": 1,
         "300364": 3,
@@ -1283,7 +1283,7 @@
         "300564": 2,
         "300242": 1,
         "300524": 1,
-        "25730": 5353
+        "25730": 5351
       },
       "last_alerts": {},
       "items_meta": {
@@ -1294,52 +1294,52 @@
         },
         "300512": {
           "price": "2,200 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300512?nocache=1127345598",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300512?nocache=2040381545",
           "currency": "Hero Points"
         },
         "300460": {
           "price": "1,200 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300460?nocache=1934656436",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300460?nocache=1068525305",
           "currency": "Hero Points"
         },
         "300364": {
           "price": "4,999 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300364?nocache=1579729324",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300364?nocache=1358893167",
           "currency": "Hero Points"
         },
         "300218": {
           "price": "9,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300218?nocache=179891862",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300218?nocache=1543412801",
           "currency": "Hero Points"
         },
         "300462": {
           "price": "4,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300462?nocache=661660111",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300462?nocache=356712302",
           "currency": "Hero Points"
         },
         "300559": {
           "price": "4,900 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300559?nocache=612352482",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300559?nocache=323004719",
           "currency": "Hero Points"
         },
         "300564": {
           "price": "100 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300564?nocache=1304129486",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300564?nocache=1855969820",
           "currency": "Hero Points"
         },
         "300242": {
           "price": "4,400 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300242?nocache=1189406676",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300242?nocache=1556222901",
           "currency": "Hero Points"
         },
         "300524": {
           "price": "7,700 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300524?nocache=1675988509",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=300524?nocache=1754862965",
           "currency": "Hero Points"
         },
         "25730": {
           "price": "1 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25730?nocache=998262214",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25730?nocache=474717024",
           "currency": "Hero Points"
         }
       },
@@ -1348,9 +1348,9 @@
     "https://herosaga.com.br/?module=vending&action=viewshop&id=44973": {
       "quantities": {
         "40400": 11,
-        "40097": 1,
+        "40097": 0,
         "55605": 1,
-        "1001217": 911,
+        "1001217": 909,
         "1001252": 1,
         "490065": 1,
         "490037": 1,
@@ -1361,7 +1361,7 @@
       "items_meta": {
         "40400": {
           "price": "6,200 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=40400?nocache=1189410816",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=40400?nocache=2138337119",
           "currency": "Hero Points"
         },
         "40097": {
@@ -1371,37 +1371,37 @@
         },
         "55605": {
           "price": "6,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=55605?nocache=188572831",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=55605?nocache=125581515",
           "currency": "Hero Points"
         },
         "1001217": {
           "price": "1 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001217?nocache=1388452822",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001217?nocache=1959923782",
           "currency": "Hero Points"
         },
         "1001252": {
           "price": "6,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001252?nocache=704433962",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001252?nocache=1276461206",
           "currency": "Hero Points"
         },
         "490065": {
           "price": "10,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490065?nocache=1321399557",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490065?nocache=45712086",
           "currency": "Hero Points"
         },
         "490037": {
           "price": "6,500 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490037?nocache=835713063",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490037?nocache=500526274",
           "currency": "Hero Points"
         },
         "490130": {
           "price": "5,500 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490130?nocache=1588304477",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=490130?nocache=1822481356",
           "currency": "Hero Points"
         },
         "450177": {
           "price": "94,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=450177?nocache=72762934",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=450177?nocache=1780745174",
           "currency": "Hero Points"
         }
       },
@@ -1426,62 +1426,62 @@
       "items_meta": {
         "31055": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=31055?nocache=405312727",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=31055?nocache=1443019246",
           "currency": "Hero Points"
         },
         "480235": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=480235?nocache=1539600291",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=480235?nocache=13760439",
           "currency": "Hero Points"
         },
         "19599": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=19599?nocache=613653231",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=19599?nocache=1107738866",
           "currency": "Hero Points"
         },
         "410220": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=410220?nocache=616115299",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=410220?nocache=920594408",
           "currency": "Hero Points"
         },
         "20524": {
           "price": "20,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20524?nocache=371501858",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20524?nocache=1541003881",
           "currency": "Hero Points"
         },
         "46062": {
           "price": "25,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=46062?nocache=1136482125",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=46062?nocache=1940014382",
           "currency": "Hero Points"
         },
         "213": {
           "price": "25,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=213?nocache=1993358564",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=213?nocache=249750133",
           "currency": "Hero Points"
         },
         "31538": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=31538?nocache=845545537",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=31538?nocache=186966006",
           "currency": "Hero Points"
         },
         "20407": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20407?nocache=636243211",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20407?nocache=1299926720",
           "currency": "Hero Points"
         },
         "196": {
           "price": "30,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=196?nocache=1799798148",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=196?nocache=374104894",
           "currency": "Hero Points"
         },
         "20619": {
           "price": "20,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20619?nocache=1666090681",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=20619?nocache=1890760560",
           "currency": "Hero Points"
         },
         "1001217": {
           "price": "1 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001217?nocache=1245032934",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001217?nocache=1795305264",
           "currency": "Hero Points"
         }
       },
@@ -1506,62 +1506,62 @@
       "items_meta": {
         "25717": {
           "price": "1,400 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25717?nocache=750977579",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25717?nocache=836959482",
           "currency": "Hero Points"
         },
         "1001171": {
           "price": "5,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001171?nocache=1679143704",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001171?nocache=1562326392",
           "currency": "Hero Points"
         },
         "1000296": {
           "price": "2,400 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000296?nocache=812485643",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000296?nocache=1774051957",
           "currency": "Hero Points"
         },
         "1000015": {
           "price": "400 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000015?nocache=790636192",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000015?nocache=1991377839",
           "currency": "Hero Points"
         },
         "1000525": {
           "price": "500 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000525?nocache=1018218941",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000525?nocache=1707360274",
           "currency": "Hero Points"
         },
         "25849": {
           "price": "600 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25849?nocache=1998751852",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25849?nocache=1736444000",
           "currency": "Hero Points"
         },
         "1000523": {
           "price": "1,300 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000523?nocache=1465294199",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000523?nocache=1464107392",
           "currency": "Hero Points"
         },
         "25846": {
           "price": "900 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25846?nocache=2066179534",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25846?nocache=276826160",
           "currency": "Hero Points"
         },
         "1001044": {
           "price": "2,500 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001044?nocache=1639947725",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1001044?nocache=991723494",
           "currency": "Hero Points"
         },
         "1000673": {
           "price": "5,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000673?nocache=1000593735",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=1000673?nocache=713177708",
           "currency": "Hero Points"
         },
         "25844": {
           "price": "3,000 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25844?nocache=1610311721",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25844?nocache=153129384",
           "currency": "Hero Points"
         },
         "25808": {
           "price": "500 c",
-          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25808?nocache=1615034489",
+          "image_url": "https://herosaga.com.br/?module=image&action=processicon&id=25808?nocache=708888212",
           "currency": "Hero Points"
         }
       },
